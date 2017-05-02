@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>
+
+    </title>
+
+    <style type="text/css" media="screen">
+        body{
+            height: 100vh;
+            position: relative;
+            margin: 0px;
+        }
+
+        .circle{
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            background-color: orange;
+            text-align: center;
+            border: 8px double red;
+            box-sizing: border-box;
+        }
+
+        .circle.right{
+            top: 200px;
+            left: 400px;
+        }
+
+        .small-circle{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: black;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+        }
+
+        .rect{
+            width: 300px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+            top: 25px;
+            left: 190px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="circle">
+        <div class="small-circle">
+        </div>
+    </div>
+
+    <div class="circle right">
+        <div class="small-circle">
+        </div>
+    </div>
+
+    <div class="rect">
+    </div>
+
+</body>
+</html>
