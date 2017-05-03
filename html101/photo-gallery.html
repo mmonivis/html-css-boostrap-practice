@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Places to visit in Georgia</title>
+    <title>Mazie Mae</title>
 
     <style type="text/css" media="screen">
         /* Inside here is CSS */
@@ -10,15 +10,26 @@
             text-align: center;
         }
 
-        #middle-section img{
+        #bottom-section img{
+            width:  40%;
+        }
+
+        img{
             width:  15%;
-            border: 4px solid #0F0;
-/*             display: block; */
+            border: 4px solid #000044;
             /* border-width: 4px 4px 4px; Top, Left/Right, Bottom */
         }
 
-        #bottom-section img{
-            width:  40%;
+        .caption {
+            font-size: 26px;
+            font-weight: bold;
+            text-shadow: 10px;
+            color: red;
+        }
+
+        div.caption {
+            color: blue;
+            border: 2px solid black;
         }
 
     </style>
@@ -29,21 +40,27 @@
 
         <!-- Top -->
         <div id="top-section">
-            <h1>A simple photo gallery made with CSS, HTML and a little bit of love</h1>
+            <h1>Mazie Mae</h1>
         </div>
 
         <!-- Middle Section -->
         <div id="middle-section">
-            <img src="./ga_pics/arabia_mnt.jpg" onclick="bigPic.src = this.src" />
-            <img src="./ga_pics/callaway_gardens.jpg" onclick="bigPic.src = this.src" />
-            <img src="./ga_pics/Etowah_Indian_Mounds.jpg" onclick="bigPic.src = this.src" />
-            <img src="./ga_pics/prov_state_canyon.jpg" onclick="bigPic.src = this.src" />
-            <img src="./ga_pics/wormsloe.jpg" onclick="bigPic.src = this.src" />
+            <div class="caption one">
+                This is a caption!
+            </div>
+            <div class="caption two">
+                This is a caption!
+            </div>
+            <img class="one" src="./mazie/mazie1.jpg" onclick="bigPic.src = this.src" />
+            <img class="two" src="./mazie/mazie2.jpg" onclick="bigPic.src = this.src" />
+            <img class="three" src="./mazie/mazie3.jpg" onclick="bigPic.src = this.src" />
+            <img class="four" src="./mazie/mazie4.jpg" onclick="bigPic.src = this.src" />
+            <img class="five" src="./mazie/mazie5.jpg" onclick="bigPic.src = this.src" />
         </div>
 
         <!-- Bottom Section -->
         <div id="bottom-section">
-            <img src="./ga_pics/arabia_mnt.jpg" name="bigPic" />
+            <img src="./mazie/mazie1.jpg" name="bigPic" />
         </div>
     <!-- Gallery close -->
     </div>

@@ -1,0 +1,217 @@
+#facebook-wrapper{
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+#header{
+    /* Facebook blue... */
+    background-color: #3B5998;
+    height: 39px;
+    padding-top: 9px;
+}
+
+#header-inner{
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    /* Overflow: hidden makes the child tell the parent how tall it is so it knows what to hide/show */
+}
+
+#fb-logo,#fb-search{
+    float: left;
+    margin-left: 10px;
+}
+
+#fb-logo{
+    background-image: url('https://www.facebook.com/rsrc.php/v3/yu/r/UnZEsNz1oHl.png');
+    background-position: 0px -17px;
+    height: 24px;
+    width: 24px;
+}
+
+#fb-search input{
+    width: 350px;
+    height: 20px;
+}
+
+#right-header{
+    float: right;
+}
+
+.fb-icons{
+    float: left;
+    color: #fff;
+    font-size: 12px;
+    height: 24px;
+    min-width: 24px;
+    margin-left: 10px;
+    line-height: 30px;
+}
+
+.fb-icons.friends, .fb-icons.messages, .fb-icons.notifications{
+    background-image: url('https://www.facebook.com/rsrc.php/v3/yU/r/ujRgtpgUFf7.png');
+}
+
+.fb-icons.friends{
+    background-position: 0px -12px;
+}
+
+.fb-icons.messages{
+    background-position: 0px -261px;
+}
+
+.fb-icons.notifications{
+    background-position: 0px -61px;
+}
+
+#home-updates .new-feeds{
+    background: rgba(0, 0, 0, .25);
+    border-radius: 2px;
+    font-size: 10px;
+}
+
+#content{
+    /* Must have overflow: hidden so the floated children pass their height up */
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#left{
+    width: 20%;
+    margin-left: 15px;
+    float: left;
+}
+
+#middle{
+    width: 50%;
+    float: left;
+    border-left: 1px #cacaca solid;
+    border-right: 1px #cacaca solid;
+    padding: 10px;
+
+}
+
+#right{
+    width: 25%;
+    float: right;
+    margin-right: 20px;
+    padding-left: 10px;
+}
+
+.left-profile .left-profile-name{
+    vertical-align: top;
+}
+
+.left-profile-name{
+    padding-left: 20px;
+}
+
+.favorites-header{
+    margin-left: 10px;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.favorites-item{
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.status-header .status-item{
+    float: left;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+.status-wrapper input{
+    width: 100%;
+    margin: auto;
+}
+
+.status-header{
+    border-bottom: 1px #cacaca solid;
+    padding-bottom: 20px;
+}
+
+.right-notifications{
+    border-bottom: 1px solid #cacaca;
+}
+
+.right-notifications-list{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.right-notifications, .events-today{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.sponsored-section{
+    display: inline-block;
+    border-bottom: 1px solid #cacaca;
+    width: 100%;
+}
+
+.sponsored, .advert{
+    display: inline-block;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sponsored{
+    font-weight: bold;
+}
+
+.right-ad{
+    border-bottom: 1px solid #cacaca;
+    height: 100px;
+    width: 100%;
+}
+
+.right-ad-header{
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+.right-ad-image{
+    float: left;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.right-ad-text{
+    padding: 5px;
+}
+
+.news-feed{
+    padding: 5px
+}
+
+.news-feed-item{
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    height: 220px;
+    width: 100%;
+}
+
+.nf-prof-image{
+    margin-right: 10px;
+    float: left;
+}
+
+.nf-prof-name{
+    font-weight: bold;
+}
+
+.nf-shared-item{
+    float: left;
+    clear: left;
+    padding-left: 20px;
+    padding-top: 5px;
+}
