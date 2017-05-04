@@ -1,0 +1,48 @@
+#header{
+    height: 100px;
+    background-color: purple;
+}
+
+#left-rail{
+    float: left;
+    width: 25%;
+    list-style: none;
+}
+
+.left-menu{
+    float: left;
+    width: 100%;
+    background-color: blue;
+    height: 50px;
+    margin-top: 10px;
+    color: white;
+}
+
+#right-rail{
+    float: right;
+    width: 25%;
+    height: 500px;
+    background-color: blue;
+    color: white;
+    margin-top: 10px;
+}
+
+#footer{
+    width: 100%;
+    height: 100px;
+    background-color: lightblue;
+    color: white;
+    float: left;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    #left-rail{
+        width: 100%;
+    }
+
+    #right-rail{
+        width: 100%;
+        height: 100px;
+    }
+}
