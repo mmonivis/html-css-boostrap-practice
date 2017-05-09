@@ -1,0 +1,69 @@
+<script type="text/javascript">
+
+// This is an empty array. Square brackets = array
+var students = [];
+
+// This is an object! curly brackets = object.
+var student = {};
+var sstudent;
+
+// Objects have properties (or keys)
+// console.log(student.name);
+student.name = "Hayes";
+// console.log(student.name);
+student.age = 27;
+console.log(student);
+
+student2 = {
+    name: "Stephen",
+    profession: "Student",
+    language: "JavaScript"
+}
+
+student3 = {
+    name: "Drew",
+    friends: [
+        "Yingrong",
+        "Carla",
+        "Daniel"
+    ],
+    sayHello: function(nameOfFriend){
+        console.log("Hello, " + nameOfFriend + "!")
+    }, // Properties HAVE to be separated by commas.
+    addFriend: function(nameOfFriend){
+        // console.log(this);
+        this.friends.push(nameOfFriend);
+    }
+}
+
+function addFriend(object, nameOfFriend){
+    object.friends.push(nameOfFriend)
+}
+
+console.log(student3)
+console.log(student3.friends[1])
+student3.sayHello("Chad");
+student3.sayHello(student3.friends[0]);
+student3.addFriend("Shane");
+console.log(student3.friends)
+
+
+var propName = "friends";
+// student3.propName = "Test"
+// console.log(student3.propName) // . is literal
+console.log(student3[propName])
+// Use [] to look for a variable
+
+students = [];
+// students.push(student);
+// students.push(student2);
+// students.push(student3);
+students = [student,student2,student3]
+console.log(students);
+
+console.log(students[2].name)
+console.log(students[2].friends[2])
+students[2].sayHello();
+
+
+</script>

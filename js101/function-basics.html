@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+
+        // document.getElementById("main").innerHTML = "The text has been replaced" // Won't work unless placed at the end of the <body> tag
+
+        function callMe(bool){
+            console.log("Hello, from inside of callMe!")
+            return bool;
+        }
+
+        function runFunction(){
+
+            randomNum = Math.random();
+            if(randomNum > .5){
+                var arg = true;
+            }else{
+                var arg = false;
+            }
+
+            var num = 5;
+            console.log(num)
+            var theBoolean = callMe(arg);
+            if(theBoolean){
+                console.log("Boolean is true")
+            }else{
+                console.log("Boolean is false")
+            }
+            console.log(num)
+        }
+
+        var num = 2
+        console.log(num)
+
+    </script>
+</head>
+<body>
+
+    <div id="main">
+        Replace this text.
+        <button onclick="runFunction();">Click me</button>
+    </div>
+
+</body>
+</html>
