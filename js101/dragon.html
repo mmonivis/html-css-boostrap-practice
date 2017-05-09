@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monopoly</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style type="text/css" media="screen">
+
+
+
+    </style>
+
+</head>
+<body>
+
+<div id="game-wrapper">
+    <div class="text-center"><img src="./monopoly/board.jpg" name="dragonImage"></div>
+    <div id="message" class="text-center">Welcome to Monopoly!</div>
+    <div id="message" class="text-center">You have the first roll. Roll above 8 and collect $200 as you pass Go. Roll below 4 and you go to jail!</div>
+    <div id="money" class="text-center">You currently have $400</div>
+    <div class="text-center"><button class="btn btn-default" onclick="rollDice();">Roll!</button></div>
+    <div class="text-center">
+        <img src="./dragon-assets/d1.gif" name="die1Image">
+        <img src="./dragon-assets/d1.gif" name="die2Image">
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    var money = 400
+
+    function rollDice(){
+        // console.log("User clicked the Fight button")
+        // Get a random number between 1 and 6
+        var randomDie1 = Math.ceil(Math.random() * 6);
+        var randomDie2 = Math.ceil(Math.random() * 6);
+        // console.log(randomDie1);
+        // console.log(randomDie2);
+        var die1 = "./dragon-assets/d" + randomDie1 + ".gif"
+        var die2 = "./dragon-assets/d" + randomDie2 + ".gif"
+        document.images.die1Image.src = die1;
+        document.images.die2Image.src = die2;
+
+        if(randomDie1 + randomDie2 > 8){
+            document.images.dragonImage.src = "./monopoly/passgo.jpg"
+            document.getElementById('message').innerHTML = "Pass go and collect $200!";
+        }else if(randomDie1 + randomDie2 < 4){
+            document.images.dragonImage.src = "./monopoly/jail.jpg"
+            document.getElementById('message').innerHTML = "You go straight to jail!"
+        }else{
+            document.images.dragonImage.src = "./monopoly/goat.jpg"
+            document.getElementById('message').innerHTML = "You owe $100"
+            // document.getElementById('money').innerHTML
+            document.getElementById(parseInt(money)).innerHTML -= 100
+
+
+        }
+    }
+
+
+</script>
+</body>
+</html>

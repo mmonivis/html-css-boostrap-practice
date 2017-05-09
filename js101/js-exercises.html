@@ -1,0 +1,59 @@
+<script type="text/javascript">
+
+
+// ---- FIRST PROBLEM ----
+
+// var dayOfWeek = new Date();
+// var dayOfWeekNumber = dayOfWeek.getDay();
+// var userInput = prompt("Please enter a number between 0 - 6");
+// var inputAsNumber = parseInt(userInput);
+
+// if(isNaN(inputAsNumber)){
+//     console.log("You entered invalid data.")
+// }else if((inputAsNumber < 1) || (inputAsNumber > 10)){
+//     console.log("Your number is out of range. Try again.")
+// }else if(inputAsNumber == randomNumber){
+//     console.log("You guessed the number!")
+// }else if((inputAsNumber >= randomNumber - 2) && (inputAsNumber <= randomNumber + 2)){
+//     console.log("You were close!")
+// }else{
+//     console.log("You were not close.")
+// }
+
+var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+var dayOfWeek = prompt("What day of the ween is in question?")
+
+// if((dayOfWeek == weekdays[0]) || (dayOfWeek == weekdays[6])){
+//     console.log("Sleep in.")
+// }else if((dayOfWeek > weekdays[0]) || (dayOfWeek < weekdays[6])){
+//     console.log("Go to work.")
+// }else{
+//     console.log("That is not a weekday")
+// }
+
+// For loop:
+// param 1. init variable to use as a counter
+// param 2. decide if loop should keep going
+// param 3. what to do at the enf of the loop each iteration
+for(let i = 0; i<weekdays.length; i++){
+    if(dayOfWeek == weekdays[i]){
+        if((i == 0) || (i == 6)){
+            console.log("Sleep in.")
+        }else{
+            console.log("Go to work.")
+        }
+    }
+}
+
+
+// ---- SECOND PROBLEM ----
+
+// 2. Given a month number, between 1 and 12, and a year, print the number of days in that month - accounting for leap years.
+
+var monthEntered = prompt("Enter a month number (between 1-12)")
+if((monthEntered == 9) || (monthEntered == 4) || (monthEntered == 6) || (monthEntered == 11)){
+    console.log
+}
+
+
+</script>

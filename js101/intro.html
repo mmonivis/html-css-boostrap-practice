@@ -1,0 +1,160 @@
+<script type="text/javascript">
+
+// Printing Stuff
+// window.alert("Hello, World!");
+// alert("Hello, World!");
+
+// Use the console... Most common
+// console.log("Hello, world!")
+
+// Actually write to the document itself. Javascript is chaning the DOM directly.
+// Won't really use this
+// document.write("Write something here")
+
+// ==================
+// --- VARIABLES ---
+// ==================
+// Same as every other language. A place to stash something that's slow so you can get it fast
+// EXAMPLES
+// Data-types
+// -Strings
+// -Numbers
+//     -Floats and integers
+// -Booleans
+// -Arrays (Lists)
+// -Objects (Dictionaries and Object hybrid)
+
+// 1. JS variables when created, need to start with var
+// 2. var means I am declaring a variable in the current scope
+// You don't use var again
+
+// --- STRINGS ---
+// var fullName = "Marissa Monivis"; // Delcaring and assigning a variable
+// fullName = "Sean B."; // var already clared so just assign it
+// fullName = "Robert \"The Man\" Bunch";
+// fullName = 'Robert "The Man" Bunch';
+// firstName = "Robert";
+// nickName = '"The Man"';
+// lastName = "Bunch";
+
+
+// console.log(firstName + nickName + lastName)
+
+
+// --- NUMBERS ---
+// var theYear = 2017; // Integer
+// var theYearDetailed = 2017.45; // Float
+// var yearAsAString = "2017";
+// console.log(typeof(theYear))
+// console.log(typeof(theYearDetailed))
+// console.log(typeof(yearAsAString)) // String will ALWAYS win in JavaScript
+
+// var twoYearsAgo = theYear - 2;
+// console.log(twoYearsAgo)
+// twoYearsAgo = yearAsAString + 2;
+// console.log(twoYearsAgo)
+
+// console.log(.2 + .1); // Will equal 0.30000000004
+
+
+// --- BOOLEAN ---
+// var theTruth = true;
+// console.log(typeof(theTruth))
+// var theLie = false;
+
+// + addition
+// - subtract
+// * multiply
+// / divide
+// % modulus
+
+// var amIEven = 5 % 2;
+// console.log(amIEven);
+
+// var i = 1;
+// Postfixing
+// i++ is same as i += 1 in python
+// console.log(i)
+// i--
+// C
+// C++
+// i = 1;
+// console.log(i++); // Hasn't changed the i variable yet.
+// console.log(i); // When printed again, it's been adjusted based on the previous line
+// console.log(++i); // This has been adjusted before console.log, so will print the new number
+// console.log(i); // Since it was prefixed, it'll print the same as before
+
+// Order of operations works the same as in Python
+// PEMDAS = Parentheses, Exponents, *, /, +, -
+
+
+// Prompt
+// Take 2 arguments, the first is the message to display, the second (optional) is the default answer/response
+// var getUserName = prompt("What is your name?", "Sean")
+// console.log(getUserName);
+// DON'T USE PROMPTS
+
+// Conditionals
+// var classSize = 16;
+// var question = "How big is your coding school class?";
+// var response = prompt(question, classSize);
+// == is comparison operator
+// = is assignment
+// === is comparison + data type comparison
+
+// if(response == 16){ // === means it has to have the same value AND be the same data type
+//     console.log("You must be in the April 2017 class!")
+// }else{
+//     console.log("You are not in the April 2017 class!")
+// }
+
+// You can convert a string to a number with the Number method...
+// if(Number(response) == 16){ // === means it has to have the same value AND be the same data type
+//     console.log("You must be in the April 2017 class!")
+// }else{
+//     console.log("You are not in the April 2017 class!")
+// }
+
+// console.log(Number("Meaning of Life"));
+var randomNumber = Math.ceil(Math.random() * 10)
+var userInput = prompt("Please enter a number between 1 - 10");
+var inputAsNumber = parseInt(userInput);
+// console.log(inputAsNumber);
+// if(typeof(inputAsNumber) == "number"){
+//     console.log("Thank you for entering a number")
+// }else{
+//     console.log("Please enter a number")
+// }
+
+// if(!isNaN(inputAsNumber)){ // NaN is a number data type...
+//     console.log("Thank you for entering a number")
+// }else{
+//     console.log("Please enter a number")
+// }
+
+// Continue asking for a number 1-10,
+// if they give you a number less than 1, alert them (console)
+// if they give you a number greater than 10, alert them (console)
+// if they give you something that is not a number, alert them (console)
+// if they guess the number, alert them, otherwise console them
+ // ---- If the user is within 2, tell them they were close
+ // ---- If they weren't within 2, mock them
+
+// Window browser has a Math object
+
+if(isNaN(inputAsNumber)){
+    console.log("You entered invalid data.")
+}else if((inputAsNumber < 1) || (inputAsNumber > 10)){
+    console.log("Your number is out of range. Try again.")
+}else if(inputAsNumber == randomNumber){
+    console.log("You guessed the number!")
+}else if((inputAsNumber >= randomNumber - 2) && (inputAsNumber <= randomNumber + 2)){
+    console.log("You were close!")
+}else{
+    console.log("You were not close.")
+}
+
+// else if(Math.abs(inputAsNumber - randomNumber) <= 2) // Another alternative to being within 2 of the random number
+
+
+</script>

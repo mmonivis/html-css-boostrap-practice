@@ -1,0 +1,78 @@
+<script type="text/javascript">
+
+// Arrays = Python lists
+// Single variable with a numbered list of parts
+var student1 = "Daniel";
+var student2 = "Merilee";
+var student3 = "Chris";
+var student4 = "Stephen";
+var students = [];
+students = ["Daniel","Merilee","Chris","Stephen"]
+console.log(students);
+console.log(students.length);
+// Like Python (and pretty much evey oyher language), the first index, is 0
+// any data type can go in any index
+// - booleans
+// - strings
+// - numbers (float, int)
+// - objects
+// - array
+var nfcSouth = [
+    'Falcons',
+    'Panthers',
+    'Saints',
+    'Bucs'
+]
+console.log(nfcSouth[0])
+console.log(nfcSouth[4]) //Undefined even if out of bounds/range
+// Append = Push
+nfcSouth.push("Cowboys");
+console.log(nfcSouth);
+nfcSouth.pop(); //will remove the last element
+console.log(nfcSouth);
+// Slice gets you a copy (DOES NOT CHANGE ORIGINAL) array from x to y (y not included)
+console.log(nfcSouth.slice(1,3))
+console.log(nfcSouth.slice(-2,-1))
+// splice allows you to add and remove elements in an array at any index
+// arg 1 = where to start
+// arg 2 = how many to delete
+// arg 3 = WHat to insert at arg 1
+nfcSouth.splice(1,1,"Cowboys");
+console.log(nfcSouth);
+
+// PUSH
+// POP
+// SLICE
+// SPLICE
+
+// Slice does not CHANGE array
+// Splice CHANGES the array to give you an entirely new array
+
+// array.splice(start)
+// array.splice(start, deleteCount)
+// array.splice(start, deleteCount, insert item1 at 'start', item2, ...)
+
+var atlTeams = [
+    "Falcons",
+    "Braves",
+    "Hawks",
+    "Thrashers"
+]
+
+var newTeam = prompt("Please enter the new team in town");
+// atlTeams.pop();
+// atlTeams.push(newTeam);
+atlTeams.splice(-1,1,newTeam)
+console.log(atlTeams);
+if(atlTeams[atlTeams[-1]] == "Atl United"){
+    console.log("Correct team added")
+}
+
+// 99 bottles of beer on the wall....
+// Loop
+numberNotGuessed = false;
+while(numberNotGuessed){
+
+}
+
+</script>
