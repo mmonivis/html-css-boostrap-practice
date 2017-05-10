@@ -1,0 +1,54 @@
+<script type="text/javascript">
+
+function Player(name, position, avgM, avgP, avgR, starter){
+    this.name = name;
+    this.position = position;
+    this.avgM = avgM;
+    this.avgP = avgP;
+    this.avgR = avgR;
+    this.starter = starter;
+    // this.species = species;
+
+    // this.reportPPM = function(){
+    //     var ppm = this.avgP / this.avgM;
+    //     ppm = Math.round(ppm * 100) / 100; // to get x amount of decimal places. Multiply by the decimal placement, then divde by that amount
+    //     return ppm;
+    // }
+}
+
+Player.prototype.reportPPM = function(){
+    var ppm = this.avgP / this.avgM;
+    ppm = Math.round(ppm * 100) / 100; // to get x amount of decimal places. Multiply by the decimal placement, then divde by that amount
+    return ppm;
+}
+
+Player.prototype.updatePPM = function(newPPM) {
+    this.ppm = newPPM;
+};
+
+Player.prototype.species = "Human"
+
+var player1 = new Player("Steph Curry", "PG", 39.2, 25.3, 4.5, true);
+var player2 = new Player("Kevin Durant", "SF", 41.2, 25.1, 8.3, true);
+var player3 = new Player("Clay Thompason", "SG", 40.2, 22.3, 3.7, true);
+player2.updatePPM(26.2);
+console.log(player2)
+
+// console.log(player1.name)
+// console.log(player1.species)
+// console.log(player1);
+
+// console.log(player1.reportPPM());
+// console.log(player2.reportPPM());
+// console.log(player3.reportPPM());
+
+console.log(player1)
+console.log(player1.species)
+player2.species = "Robot"
+console.log(player1.species)
+console.log(player2.species)
+console.log(player2)
+
+// Prototype is just a way to make JavaScript more efficient by using ONE line of code & applying to all cases instead of writing it for every scenario.
+
+</script>

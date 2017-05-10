@@ -53,6 +53,19 @@ function drawBall(){
 
 var ball = setInterval(drawBall,20);
 
-canvas.addEventListener("click", function(){
-    console.log("match")
+var hit = 0;
+var miss = 0;
+canvas.addEventListener('click', function(event){
+    if(Math.sqrt((event.layerY - y) * (event.layerY - y) + (event.layerX - x) * (event.layerX - x)) < (2 * r)){
+        // console.log("Hit");
+        hit++;
+    }
+    else{
+        // console.log("Miss");
+        miss++;
+    }
+
+    document.getElementById('hit-count').innerHTML = hit;
+    document.getElementById('miss-count').innerHTML = miss;
 });
+
