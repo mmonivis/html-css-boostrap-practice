@@ -1,48 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Pictionary</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
 
-    <style type="text/css" media="screen">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
-        *{
-            text-align: center;
-            font-family: 'Pangolin', cursive;
-        }
-
-        body{
-            background-image: url('https://s-media-cache-ak0.pinimg.com/originals/d0/13/6f/d0136f768bf1f7a0712ac8742edf01cb.jpg');
-        }
-
-        .container{
-            margin-top: 10px;
-            background-color: white;
-            padding-bottom: 10px;
-            border: 10px double black;
-        }
-
-        .header{
-            background-color: white;
-        }
-
-        canvas{
-            border: 10px solid black;
-        }
-
-        .header, .toolbar, .thickness, .color-picker{
-            padding: 5px;
-            background-image: none;
-        }
-
-
-
-    </style>
 </head>
 <body>
+
 <div class="container">
 
     <div class="header toolbar">
@@ -57,10 +26,10 @@
         </div>
     </div>
 
-    <canvas class="canvas" width="500px" height="500px"></canvas>
+    <canvas id="canvas" width="500px" height="500px"></canvas>
 
     <div class="clear-button">
-        <button class="btn btn-default" onclick="context.clearRect(0, 0, canvas.width, canvas.height);">Clear</button>
+        <button class="btn btn-default btn-lg" onclick="context.clearRect(0, 0, canvas.width, canvas.height);">Clear</button>
     </div>
 
 </div>

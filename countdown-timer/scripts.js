@@ -29,7 +29,7 @@ Timer.prototype.updateTimer = function(){
 }
 
 // var endDate = new Date();
-var endDate = new Date(Date.parse('December 25, 2017'));
+var endDate = new Date(Date.parse('August 9, 2017'));
 // console.log(endDate);
 var disneyChristmasTimer = new Timer('timer-div', endDate);
 setInterval(
