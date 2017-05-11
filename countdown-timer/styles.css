@@ -7,7 +7,7 @@ body{
 }
 
 .header{
-    margin: 10vh;
+    margin: 9vh;
 }
 
 h1{
@@ -32,4 +32,9 @@ h1{
     border-radius:  3px;
     background: #F1B054;
     display: inline-block;
+}
+
+.enter-date{
+    margin: 40px;
+    font-size: 24px;
 }

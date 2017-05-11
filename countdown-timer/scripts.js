@@ -29,11 +29,12 @@ Timer.prototype.updateTimer = function(){
 }
 
 // var endDate = new Date();
-var endDate = new Date(Date.parse('August 9, 2017'));
+// var newDate = document.getElementById(document.forms['newDate']);
+var endDate = new Date(Date.parse(newDate));
 // console.log(endDate);
-var disneyChristmasTimer = new Timer('timer-div', endDate);
+var countdownToGraduationTimer = new Timer('timer-div', endDate);
 setInterval(
     function(){
-        disneyChristmasTimer.updateTimer();
+        countdownToGraduationTimer.updateTimer();
     },1000
 )
