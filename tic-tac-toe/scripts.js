@@ -2,6 +2,7 @@
 var whosTurn = 1;
 var player1Squares = [];
 var player2Squares = [];
+var computerSquares = [];
 var winningCombos = [
     ['A1', 'B1', 'C1'], // Row 1
     ['A2', 'B2', 'C2'], // Row 2
@@ -14,10 +15,13 @@ var winningCombos = [
 ]
 
 var gameOverBool = false;
-// var onePlayerGame = true;
+var onePlayerGame = true;
+
+
 
 var squares = document.getElementsByClassName('square');
 for (let i = 0; i < squares.length; i++){
+    console.log(squares[i].className);
     squares[i].addEventListener('click', function(event){
         // console.log("User clicked on a square!")
         if(!gameOverBool){
@@ -25,7 +29,6 @@ for (let i = 0; i < squares.length; i++){
         }
     });
 }
-
 
 function markSquare(currentSquare){
     console.log(currentSquare.id);
@@ -41,9 +44,12 @@ function markSquare(currentSquare){
         // squareResult = "";
         player1Squares.push(currentSquare.id);
         checkWin(player1Squares,1);
-        // if(onePlayerGame){
-        //     computerMove();
-        // }
+        if(onePlayerGame){
+            computerMove();
+            computerSquares.push(currentSquare.id);
+        }else{
+            whosTurn = 2;
+        }
     }else{
         currentSquare.innerHTML = "O";
         whosTurn = 1;
@@ -57,12 +63,20 @@ function markSquare(currentSquare){
     messageElement.innerHTML = squareResult;
 }
 
-// function computerMove(){
-//     // Find a random square
-//     // See if that square is empty
-//     // If so, send it to square
-//     // If not, keep looking
-// }
+function computerMove(){
+    // Find a random square
+    // See if that square is empty
+    // If so, send it to square
+    // If not, keep looking
+    squareFound = false;
+    while (squareFound == false){
+        rand = Math.floor(Math.random() * 8)
+        if((squares[rand].innerHTML != "X") && (squares[rand].innerHTML != "O")){
+            squareFound = true;
+            markSquare(squares[rand]);
+        }
+    }
+}
 
 function checkWin(currentPlayersSquares, whoJustWent){
     // Outter loop winning combos
@@ -83,6 +97,7 @@ function checkWin(currentPlayersSquares, whoJustWent){
             console.log("Player " + whoJustWent + " won the game!")
             // Stop checking i's, the game is over!
             gameOver(whoJustWent, winningCombos[i]);
+            squareCount = 0;
             break;
         }
     }
@@ -103,6 +118,8 @@ function resetBoard(){
     var squares = document.getElementsByClassName('square');
     for (i = 0; i < squares.length; i++){
         squares[i].innerHTML = "&nbsp;";
+        squares[i].className = 'square';
+        squareCount = 0;
     }
     gameOverBool = false;
 }
