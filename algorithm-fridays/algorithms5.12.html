@@ -1,0 +1,121 @@
+<script type="text/javascript">
+
+
+// A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+
+// Find the largest palindrome made from the product of two 3-digit numbers.
+
+
+// var numArray = [];
+// var numArrayTwo = [];
+// var arrayProduct = [];
+// // var i = 10;
+// for(var i = 10; i < 100; i++){
+//     numArray.push(i);
+// }
+
+// for(var j = 10; j < 100; j++){
+//     numArrayTwo.push(j);
+//     for(j = 10; j < 100; j++){
+//         var arrayProduct = parseInt(numArray[i]) * parseInt(numArrayTwo[j])
+//         console.log(arrayProduct);
+//     }
+// }
+
+
+max = 0;
+num1 = 0;
+num2 = 0;
+for(let n = 999; n > 100; n--){
+    for(let i = 998; i > 99; i--){
+        var temp = n * i;
+        var tempList = temp.toString().split('');
+        var copyList = tempList.slice();
+        var reverseList = copyList.reverse();
+        var palindromic = true;
+        for(let j = 0; j < tempList.length; j++){
+            if(tempList[j] != reverseList[j]){
+                palindromic = false;
+                break;
+            }
+        }
+        if(palindromic){
+            if(parseInt(tempList.join('')) >= max){
+                max = parseInt(tempList.join(''));
+                num1 = n;
+                num2 = i;
+            }
+        }
+    }
+}
+
+console.log(max)
+console.log(num1)
+console.log(num2)
+
+// ---
+
+isPalindrome = function(){
+    var arrayReverse2 = num.toString().split('').reverse().join('');
+    var arrayReverse = parseInt(arrayReverse2);
+    return (num === arrayReverse);
+}
+
+var pal = [1];
+for(let i = 100; i < 1000; i++){
+    for(let j = 100; j < 1000; j++){
+        f = i * j;
+        if((isPalindrome(f)) && (f > pal[0])){
+            pal.pop();
+            pal.push(f);
+        }
+    }
+}
+
+
+
+// 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+
+// What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
+// // determine start number = n ie. 20
+// function getSmallestDivisor(n){
+//   var i = n;
+
+//  // if not 0 then i++
+//   function checkI(i){
+//     for (var j = 1; j <= n; j++) {
+//       // loop 20 % i   where i goes from 1 to 20  must % = 0
+//       if( i % j !== 0 ){ return false; }
+//     };
+//     return true;
+//   }
+//   // break loop when n all are 0
+//   while( !(checkI(i)) ){ i+=n; }
+//   return i;
+// }
+
+// console.log(getSmallestDivisor(20));
+
+var found = false;
+for (let i = 2520; found == false; i += 2520){
+    var x = 0;
+    for(let j = 20; j >= 11; j--){
+        if(i % j != 0){
+            break;
+        }else{
+            x++;
+        }
+    }
+    if(x == 10){
+        console.log(i);
+        found = true;
+        break;
+    }
+}
+
+
+
+
+
+</script>

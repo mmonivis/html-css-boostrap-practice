@@ -19,6 +19,10 @@ h1{
     margin: 20px 0px;
 }
 
+#numberOfPlayersMessage{
+    margin-top: 10px;
+}
+
 #board{
     max-width: 640px;
     min-width: 320px;

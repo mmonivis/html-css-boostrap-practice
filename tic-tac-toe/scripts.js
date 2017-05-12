@@ -3,6 +3,7 @@ var whosTurn = 1;
 var player1Squares = [];
 var player2Squares = [];
 var computerSquares = [];
+var completedSquares = [];
 var winningCombos = [
     ['A1', 'B1', 'C1'], // Row 1
     ['A2', 'B2', 'C2'], // Row 2
@@ -17,7 +18,19 @@ var winningCombos = [
 var gameOverBool = false;
 var onePlayerGame = true;
 
+var playersMessage = document.getElementById('numberOfPlayersMessage');
 
+function vsComputer(){
+    onePlayerGame = true;
+    playersMessage.innerHTML = "Player 1 versus Computer!"
+    console.log("One player");
+}
+
+function twoPlayers(){
+    onePlayerGame = false;
+    playersMessage.innerHTML = "Player 1 versus Player 2!"
+    console.log("Two players");
+}
 
 var squares = document.getElementsByClassName('square');
 for (let i = 0; i < squares.length; i++){
@@ -43,10 +56,12 @@ function markSquare(currentSquare){
         whosTurn = 2;
         // squareResult = "";
         player1Squares.push(currentSquare.id);
+        completedSquares.push(currentSquare.id);
         checkWin(player1Squares,1);
         if(onePlayerGame){
             computerMove();
             computerSquares.push(currentSquare.id);
+            completedSquares.push(currentSquare.id);
         }else{
             whosTurn = 2;
         }
@@ -74,6 +89,8 @@ function computerMove(){
         if((squares[rand].innerHTML != "X") && (squares[rand].innerHTML != "O")){
             squareFound = true;
             markSquare(squares[rand]);
+        }else if(completedSquares.length == squares.length){
+            break;
         }
     }
 }
@@ -121,5 +138,10 @@ function resetBoard(){
         squares[i].className = 'square';
         squareCount = 0;
     }
+    player1Squares = [];
+    player2Squares = [];
+    computerSquares = [];
+    completedSquares = [];
+    whosTurn = 1;
     gameOverBool = false;
 }
