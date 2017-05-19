@@ -1,0 +1,56 @@
+<!-- Scope
+– Determines what can see a variable
+– Global, top level, EVERYONE can see and change a global
+–– In Python, there are all the way to the left
+
+– Local
+– Inside of a function, only visible internally and to chidl functions -->
+
+<script type="text/javascript">
+    // This is a global variable. It belongs to a WINDOW.
+    // var imAGlobal = 1;
+    // function checkScope(){
+    //     // In spite of the misleading name, this is a local variable
+    //     // It is NOT visible outside (above) this function
+    //     var imAGlobal = 2;
+    //     console.log("local var", imAGlobal); // 2
+    //     // Unless you have specific reason to do this, AVOID
+    //     // Putting .window in front of anything will access the global scope. Meaning we can still access the global scope variable despite the local variable name, but we have to specify that we want the global scope.
+    //     console.log("global var", window.imAGlobal); // 1
+    //     function child(){
+    //         imAGlobal = 3; // This is CHANGING the original variable owned by the parent
+    //         // var imAGlobal = 3; // This is the child's own little variable, it'll die after the function ends
+    //         console.log("Inside of child", imAGlobal);
+    //     }
+    //     child();
+    //     console.log("after child", imAGlobal);
+    // }
+    // console.log(window.checkScope)
+    // checkScope();
+    // child();
+
+    // Global copy of x
+    var x = 1;
+    function hoistingTest(){
+        var x;
+        // Based on scope, hoistingTest can see the global x
+        console.log(x);
+        // Local copy of x
+        x = 2;
+        // The below line breaks up into 35 and 39.
+        // All vars are moved to the top immediately (without their value)
+        // var x = 2;
+        // The child function looks up level after level for a var
+        // If it never finds one, it adds the var to the global scope
+        // AVOID this by always using var to declare
+        y = 3;
+    }
+
+    hoistingTest();
+// HOISTING
+// Put your vars at the top of a function or JS will do it for you.
+console.log(y);
+
+
+
+</script>

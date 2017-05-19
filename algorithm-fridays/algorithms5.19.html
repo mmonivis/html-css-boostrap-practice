@@ -1,0 +1,62 @@
+<script type="text/javascript">
+
+var satCount = 0;
+
+//////////////////////////////////////
+// SOLUTION 1: CONVERTING TO STRING //
+//////////////////////////////////////
+
+// for(let j = 1701; j < 1800; j++){
+//     for(let i = 0; i <= 11; i++){
+//         var firstOfMonth = new Date(j,i,1);
+//         var firstOfMonthString = String(firstOfMonth);
+//         // console.dir(satOfYear);
+//         var satOfYear = firstOfMonthString.includes('Sat');
+//         // console.log(satOfYear);
+//         if(satOfYear == true){
+//             satCount++;
+//             console.log(i,j);
+//         }
+//     }
+// }
+
+
+////////////////////////////////
+// SOLUTION 2: USING GETDAY() //
+////////////////////////////////
+
+for(let j = 1701; j < 1800; j++){
+    for(let i = 0; i <= 11; i++){
+        var firstOfMonth = new Date(j,i,1);
+        var firstSatOfMonth = firstOfMonth.getDay();
+        if(firstSatOfMonth == 6){
+            satCount++;
+            console.log(i,j);
+        }
+    }
+}
+
+console.log(satCount);
+
+
+var romNum = {
+    'I':1,
+    'V':5,
+    'X':10,
+    'L':50,
+    'C':100,
+    'D':500,
+    'M':1000
+};
+
+
+function getRomNum(integer){
+    for(let i = 0; i <= 10; i++){
+        if(i < 3){
+            console.log(romNum[0] * i);
+        }
+    }
+}
+
+
+</script>
