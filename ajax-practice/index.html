@@ -1,0 +1,23 @@
+<script type="text/javascript">
+
+for(var i = 0; i<1000; i++){
+    continue;
+}
+console.log(i);
+
+console.log("Line 8");
+
+setTimeout(function(){
+    console.log("Line 11");
+},1000);
+
+setTimeout(function(){
+    console.log("Line 15");
+},0);
+
+console.log("Line 18");
+
+// JS runs what it can run right NOW, it does not stop and wait for anything
+// AJAX sneaks away from everything else to go get the JSON
+
+</script>
