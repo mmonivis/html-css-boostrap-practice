@@ -1,0 +1,45 @@
+body{
+    /* animation: spin 4s infinite linear; */
+}
+
+.div{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: purple;
+    line-height: 4;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    animation: move 4s infinite linear alternate;
+}
+
+.text{
+    animation: spin 4s infinite linear;
+}
+
+.random{
+    text-align: center;
+    font-size: 100px;
+    margin-top: 100px;
+    color: #f00;
+    text-shadow: -5px -9px #000000;
+}
+
+@keyframes move { /* "spin" is defined by the user. essentially, a variable */
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes spin { /* "spin" is defined by the user. essentially, a variable */
+    from {
+        transform: rotate(0deg) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) rotate(360deg);
+    }
+}
